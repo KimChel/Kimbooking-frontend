@@ -23,7 +23,6 @@ const Register = () => {
     }
 
 
-
     const register = () => {
         const { username, email, password } = credentials
         if (username && email && password) {
