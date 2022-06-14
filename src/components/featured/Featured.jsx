@@ -8,7 +8,7 @@ import nafplio from "../pictures/nafplio.png"
 
 const Featured = () => {
 
-    const { data, loading, error } = useFetch("api/hotels/countByCity?cities=arta,giannena")
+    const { data, loading, error } = useFetch("/api/hotels/countByCity?cities=arta,giannena")
 
 
     return (
