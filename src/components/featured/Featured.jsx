@@ -14,10 +14,10 @@ const Featured = () => {
     const navigate = useNavigate();
     const { dispatch } = useContext(SearchContext)
 
-    const handleClick = () => {
-        dispatch({ type: "NEW_SEARCH", payload: { arta, dates, options } })
-        navigate("/hotels", { state: { arta, dates, options } });
-    }
+    // const handleClick = () => {
+    //     dispatch({ type: "NEW_SEARCH", payload: { arta, dates, options } })
+    //     navigate("/hotels", { state: { arta, dates, options } });
+    // }
 
 
     return (
@@ -25,7 +25,7 @@ const Featured = () => {
             {loading ? ("Loading please wait") : (
                 <>
                     <div className="featuredItem">
-                        <img onClick={handleClick} src={arta} alt="" className='featuredImg' />
+                        <img  src={arta} alt="" className='featuredImg' />
                         <div className="featuredTitles">
                             <h1>Arta</h1>
                             <h2>{data[0]} Properties</h2>
