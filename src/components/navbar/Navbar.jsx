@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
           <span className="logo">Kimonbooking</span>
         </Link>
-        {user ? user.username :
+        {user ? user.username:
           (<div className="navItems">
             <button onClick={handleClickR} className="navButton">Register</button>
             <button onClick={handleClickL} className="navButton">Login</button>

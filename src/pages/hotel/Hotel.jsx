@@ -63,7 +63,7 @@ export const Hotel = () => {
               </div>
               <div className="hotelRating">
                 <span>Rating</span>
-                <button>9.2</button>
+                <button>{data.rating}</button>
               </div>
             </div>
             <div className="hotelWrapperImages">
