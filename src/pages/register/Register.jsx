@@ -26,7 +26,7 @@ const Register = () => {
     const register = () => {
         const { username, email, password } = credentials
         if (username && email && password) {
-            axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, credentials)
+            axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, credentials)
                 .then(res => console.log(res))
         }
         else {
