@@ -19,7 +19,7 @@ export const Hotel = () => {
 
   const [open, setOpen] = useState(false)
 
-  const { data, loading, error, } = useFetch(`/hotels/find/${path}`)
+  const { data, loading, error, } = useFetch(`/api/hotels/find/${path}`)
 
   const { user } = useContext(AuthContext)
   const navigate = useNavigate()
