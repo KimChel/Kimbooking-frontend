@@ -74,17 +74,17 @@ font-weight: bold;
 
 }
 
-.skata{
+.siRat{
     display: flex;
     flex-direction: column;
 }
 
-.skata>span{
+.siRat>span{
     font-weight: bold;
     color: lightcoral;
 }
 
-.skata>label{
+.siRat>label{
     font-size: 12px;
 }
 
@@ -125,6 +125,7 @@ font-weight: bold;
     font-size: 15px;
     border-radius: 4px;
     color: white;
+    cursor: pointer;
 
 }
 

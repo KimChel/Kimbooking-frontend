@@ -11,16 +11,16 @@ const SearchItem = ({ item }) => {
       <div className="siDesc">
         <h1 className="siTitle">{item.name}</h1>
         <span className="siDistance">{item.distance}m from center</span>
-        <span className="siTaxiOp">No taxi :(</span>
-        <span className="siSubtitle">Studio hot, sorry kid</span>
+        <span className="siTaxiOp">Taxi available</span>
+        <span className="siSubtitle">{item.desc}</span>
         <span className="siFeatures">{item.desc}</span>
-        <span className="siCancelOp">300€ fee for cancellation</span>
+        <span className="siCancelOp">No cancellation fee</span>
       </div>
 
       <div className="siDetails">
         {item.rating &&
           <div className="siDetRat">
-            <div className="skata">
+            <div className="siRat">
               <span>Wonderful</span>
               <label>1,445 reviews</label>
             </div>
@@ -28,7 +28,7 @@ const SearchItem = ({ item }) => {
           </div>}
         <div className="siDetPrice">
           <span>{item.cheapestPrice}€</span>
-          <label>Does not include taxes idoit</label>
+          <label>Including taxes</label>
           <Link to={`/hotels/${item._id}`}>
             <button className="siButton">Check Availability</button>
           </Link>
