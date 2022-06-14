@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../../context/AuthContext'
+import "./register.css"
 
 const Register = () => {
 
@@ -13,20 +14,22 @@ const Register = () => {
 
     const {loading, error, dispatch } = useContext(AuthContext)
 
-    const handleChange = (e) => {
+    const handleChange = e => {
         const { username, email, password } = e.target
         setCredentials({
+            ...credentials,
             [username]:username,
-            [email]:email,
-            [password]:password
+            [email]:"email",
+            [password]:"password"
         })
+        
     }
 
 
     const register = () => {
         const { username, email, password } = credentials
         if (username && email && password) {
-            axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, credentials)
+            axios.post(`/auth/register`, credentials)
                 .then(res => console.log(res))
         }
         else {
@@ -36,12 +39,15 @@ const Register = () => {
 
 
     return (
+        <div className="register">
+
         <div className="registerContainer">
             <input type="text" placeholder="username" id="username" username = {credentials.username} onChange={handleChange} className="registerInput" />
             <input type="text" placeholder="email" id="email" email = {credentials.email} onChange={handleChange} className="registerInput" />
             <input type="password" placeholder="password" id="password" password = {credentials.password} onChange={handleChange} className="registerInput" />
             <button onClick={register} className="registerButton">Register</button>
             {error && <span>{error.message}</span>}
+        </div>
         </div>
     )
 }

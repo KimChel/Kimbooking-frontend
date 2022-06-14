@@ -1,0 +1,26 @@
+.register{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.registerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.registerInput{
+    padding: 3px;
+}
+
+.registerButton{
+    border: none;
+    color: white;
+    background-color: lightcoral;
+    padding: 10px;
+    font-weight: bold;
+    
+}
