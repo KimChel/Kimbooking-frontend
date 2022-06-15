@@ -25,3 +25,12 @@
     cursor: pointer;
     color:  lightcoral;
 }
+
+.logout{
+    border: none;
+    border-radius: 3px;
+    background-color: lightcoral;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}

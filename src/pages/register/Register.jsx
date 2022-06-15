@@ -36,7 +36,7 @@ const Register = () => {
     const register = async () => {
 
         try {
-            await axios.post(`${REACT_APP_API_URL}/api/auth/register`, credentials)
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, credentials)
             navigate("/")
 
         } catch (err) {
