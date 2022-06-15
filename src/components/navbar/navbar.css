@@ -30,7 +30,8 @@
     border: none;
     border-radius: 3px;
     background-color: lightcoral;
-    padding: 4px;
+    padding: 6px;
     font-weight: bold;
     font-size: 14px;
+    color: white;
 }
