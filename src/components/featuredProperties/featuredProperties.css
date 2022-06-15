@@ -40,6 +40,8 @@
     padding: 3px;
     margin-right: 10px;
     font-weight: bold;
+    height: 25px;
+    width: 25px;
 }
 
 .fpRating>span{
